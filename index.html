@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taofiq Ojuolape | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Image Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      border-radius: 10px;
+    }
+
+    .modal-content:hover {
+      transform: scale(1.02);
+      transition: 0.3s ease-in-out;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <!-- <div class="bg-grey-700"> </div> for the whole background color -->
+
+
+  <header class="bg-blue-700 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl font-bold mb-2">Taofiq Ojuolape</h1>
+      <p class="text-lg">IT Support Officer | Data Analyst | Tech Enthusiast | Educator</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+        class="mt-4 bg-white text-blue-700 font-semibold py-2 px-6 rounded-lg hover:bg-gray-200">
+        Contact Me
+      </button>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="container mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-center">About Me</h2>
+    <p class="text-center max-w-2xl mx-auto text-gray-700">
+      Data Analyst with a strong background in IT operations and financial analysis, skilled in transforming raw data
+      into actionable insights that drive business decisions. Experienced in statistical analysis, data visualization,
+      and performance monitoring across multiple industries. Proficient in SQL, Python, Power BI, and Excel, with a
+      proven ability to build and interpret reports, track KPIs, and identify trends that improve efficiency and
+      strategy. Adept at problem-solving, stakeholder communication, and delivering results in fast-paced environments.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="bg-white py-10">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-6 text-center">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="p-4 bg-gray-100 rounded-lg">Data Analysis</div>
+        <div class="p-4 bg-gray-100 rounded-lg">IT Support</div>
+        <div class="p-4 bg-gray-100 rounded-lg">Python</div>
+        <div class="p-4 bg-gray-100 rounded-lg">Power BI</div>
+        <a href="https://drive.google.com/drive/folders/1Ed_t08MzThDfgbdB747WwK4Syi_n7cUg?usp=sharing" ,
+          target="_blank">
+          <div class="p-4 bg-gray-100 rounded-lg"><u>SQL</u></div>
+        </a>
+        <div class="p-4 bg-gray-100 rounded-lg">Excel</div>
+        <div class="p-4 bg-gray-100 rounded-lg">Troubleshooting</div>
+        <div class="p-4 bg-gray-100 rounded-lg">Communication</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="container mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-center">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Project 1 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div class="h-56 w-full overflow-hidden">
+          <img src="images/ProjectE.png" alt="Project 1" class="object-cover w-full h-full cursor-pointer"
+            onclick="openModal(this)">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Customer Behavior & Value Insights</h3>
+          <p class="text-gray-600 text-sm">
+            This analysis highlights key customer segments, purchasing patterns, and lifetime value drivers, enabling
+            the business to better understand who and where its most valuable customers are and how to improve retention
+            and engagement.
+            Extracted with SQL and Built with PBi
+            <br>PBi link: <a
+              href="https://app.powerbi.com/groups/me/reports/a577b408-23e1-4ef3-8c1e-cf4c52067e10/a5774b63e319cfdba610?experience=power-bi"
+              , target="_blank"><u>here</u></a>
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Project 2 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div class="h-56 w-full overflow-hidden">
+          <img src="images/projectF.png" alt="Project 1" class="object-cover w-full h-full cursor-pointer"
+            onclick="openModal(this)">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Strategic Business Performance Insights</h3>
+          <p class="text-gray-600 text-sm">
+            This section provides a high-level view of operational and financial performance, uncovering trends,
+            inefficiencies, and growth opportunities that support informed decision-making and long-term business
+            strategy.
+            Extracted with SQL and Built with PBi.
+            <br>PBi link: <a
+              href="https://app.powerbi.com/groups/me/reports/a577b408-23e1-4ef3-8c1e-cf4c52067e10/10b41644edf670107d81?experience=power-bi"
+              , target="_blank"><u>here</u></a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div class="h-56 w-full overflow-hidden">
+          <img src="images/projectH.png" alt="Project 2" class="object-cover w-full h-full cursor-pointer"
+            onclick="openModal(this)">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">IT Asset Tracker</h3>
+          <p class="text-gray-600 text-sm">
+            Built with Excel and PowerBi, this system monitors company devices, tracks movements, and generates quick
+            asset reports. Helps IT and finance teams control costs, plan replacements, and avoid risk from expired or
+            obsolete assets.
+            <br>PBi link: <a
+              href="https://app.powerbi.com/groups/me/reports/0e0b64b7-83a9-455d-99ba-ce6b76e56802/2d5d8ca50b15bcfd0923?experience=power-bi"
+              , target="_blank"><u>here</u></a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div class="h-56 w-full overflow-hidden">
+          <img src="images/projectG.png" alt="Project 2" class="object-cover w-full h-full cursor-pointer"
+            onclick="openModal(this)">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Sales Performance & Revenue Dashboard</h3>
+          <p class="text-gray-600 text-sm">
+            The sales dashboard presents real-time visibility into revenue, product performance, and sales trends,
+            helping stakeholders track targets, identify top-performing products, and quickly respond to changes in
+            demand.
+            Built with Excel and PBi
+            <br>PBi link: <a
+              href="https://app.powerbi.com/groups/me/reports/fbd08259-0e88-4400-b6f6-5173037783ce/c7c45a7ee27d6b9984da?experience=power-bi"
+              , target="_blank"><u>here</u></a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div class="h-56 w-full overflow-hidden">
+          <img src="images/ProjectD.png" alt="Project 2" class="object-cover w-full h-full cursor-pointer"
+            onclick="openModal(this)">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2"> Employee Data Dashboard</h3>
+          <p class="text-gray-600 text-sm">
+            A Power BI dashboard analyzing employee demographics, hiring trends, and retention metrics for HR insights.
+            <br>PBi link: <a
+              href="https://app.powerbi.com/groups/me/reports/b125a660-d7ac-4101-a066-6516f4e4f4c7/5ae093fdbd290d879a50?experience=power-bi"
+              , target="_blank"><u>here</u></a>
+          </p>
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div class="h-56 w-full overflow-hidden">
+          <img src="images/projectC.png" alt="Project 2" class="object-cover w-full h-full cursor-pointer"
+            onclick="openModal(this)">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Social Media Impact & Engagement Analysis</h3>
+          <p class="text-gray-600 text-sm">
+            This analysis evaluates social media reach, engagement, and conversion metrics to assess campaign
+            effectiveness, optimize content strategy, and understand how social activity contributes to overall business
+            goals.
+            Built with Excel and Power Query
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-blue-50 py-10">
+    <div class="container mx-auto px-6 max-w-lg">
+      <h2 class="text-2xl font-bold mb-4 text-center">Contact Me</h2>
+      <div class="text-center mb-6">
+        <p><strong>Email:</strong> <a href="mailto:taofiqojuolape@gmail.com"
+            class="text-blue-700 hover:underline">taofiqojuolape@gmail.com</a></p>
+        <p><strong>Phone:</strong> +234 810 889 8411</p>
+      </div>
+      <p></p>
+
+      <form action="https://formsubmit.co/taofiqojuolape@gmail.com" method="POST"
+        class="bg-white p-6 rounded-lg shadow-md">
+        <!-- Replace youremail@example.com with your real email -->
+        <input type="hidden" name="_subject" value="New Portfolio Contact!" />
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Name</label>
+          <input type="text" name="name" required
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Email</label>
+          <input type="email" name="email" required
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Message</label>
+          <textarea name="message" rows="4" required
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-800">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Taofiq Ojuolape. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Modal -->
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
